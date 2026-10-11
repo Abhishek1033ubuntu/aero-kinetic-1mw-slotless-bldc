@@ -1,3 +1,22 @@
+<!-- PROJECT BADGES -->
+<p align="center">
+  <a href="https://gemini.google.com">
+    <img src="https://img.shields.io/badge/Powered%20by-Google%20Gemini-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Google Gemini">
+  </a>
+  <a href="https://colab.research.google.com/">
+    <img src="https://img.shields.io/badge/Open%20In-Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" alt="Open in Colab">
+  </a>
+  <a href="https://github.com/sponsors">
+    <img src="https://img.shields.io/badge/Sponsor-GitHub-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor">
+  </a>
+  <a href="https://www.paypal.com">
+    <img src="https://img.shields.io/badge/Donate-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
+  </a>
+</p>
+
 # AeroKinetic-1MW-Slotless-BLDC
 
 > **1.0 MW Inverted Slotless/Coreless BLDC Motor & Bidirectional Kinetic Regeneration Suite for Hybrid-Electric Aerospace Propulsion**

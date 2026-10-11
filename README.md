@@ -6,6 +6,12 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Hardware: SiC AFE](https://img.shields.io/badge/Inverter-1200V%2F1000A%20SiC-green.svg)](#)
 [![HIL: C-Firmware Verified](https://img.shields.io/badge/HIL-C%2B%2B%20Firmware%20Verified-purple.svg)](#)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0004--6913--096X-A6CE39)](https://orcid.org/0009-0004-6913-096X)
+[![Google Gemini](https://img.shields.io/badge/Powered_by-Google_Gemini-4285F4)](https://gemini.google.com)
+[![Google Colab](https://img.shields.io/badge/Open_in-Google_Colab-F9AB00)](https://colab.research.google.com)
+[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-ea4aaa)](https://github.com/sponsors)
+[![PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg?logo=paypal)](https://www.paypal.me/Abhishek1033ubuntu)
+
 
 ---
 

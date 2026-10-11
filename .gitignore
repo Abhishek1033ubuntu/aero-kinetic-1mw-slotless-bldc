@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.o
+*.a
+*.dll
+*.dylib
+
+# C/C++ Build Artifacts
+build/
+dist/
+*.egg-info/
+firmware/*.so
+
+# PDF & Document Build Temps
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Environments & IDEs
+.venv/
+env/
+venv/
+ENV/
+.vscode/
+.idea/
+
+# Jupyter / Colab Checkpoints
+.ipynb_checkpoints

@@ -135,5 +135,3 @@ The 1.0 MW motor is driven by a 1200V / 1000A Silicon Carbide (SiC) Active Front
 ## License
 
 Distributed under the MIT License. See `LICENSE` for details.
-
-```

@@ -11,6 +11,7 @@
 [![Google Colab](https://img.shields.io/badge/Open_in-Google_Colab-F9AB00)](https://colab.research.google.com)
 [![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-ea4aaa)](https://github.com/sponsors)
 [![PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg?logo=paypal)](https://www.paypal.me/Abhishek1033ubuntu)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23302888-blue?style=for-the-badge&logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.23302888)  
 
 
 ---

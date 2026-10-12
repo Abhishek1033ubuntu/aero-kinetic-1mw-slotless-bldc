@@ -1,4 +1,4 @@
-name: Draft and Publish GitHub Release
+name: Build and Publish v2.0.0-HV Release
 
 on:
   push:
@@ -7,42 +7,44 @@ on:
 
 jobs:
   build-and-release:
-    name: Create Release & Package Assets
+    name: Build C Firmware & Publish Release Assets
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python Environment
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Install Dependencies & Verify Environment
+      - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Verify C Firmware Compilation
+      - name: Compile 5.0 kV 5-Level ANPC C Firmware
         run: |
-          gcc -O3 -shared -fPIC -o firmware/foc_firmware.so firmware/foc_firmware.c -lm
-          ls -la firmware/foc_firmware.so
+          gcc -O3 -shared -fPIC -o firmware/foc_anpc_5kv_firmware.so firmware/foc_anpc_5kv_firmware.c -lm
+          ls -la firmware/foc_anpc_5kv_firmware.so
 
-      - name: Create Release Draft
+      - name: Create GitHub Release
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
-          name: Release ${{ github.ref_name }} — 1.0 MW Inverted BLDC Motor Architecture
+          name: Release ${{ github.ref_name }} — 5.0 kV High-Voltage ANPC Architecture
           draft: false
           prerelease: false
           files: |
-            firmware/foc_firmware.c
+            firmware/foc_anpc_5kv_firmware.c
+            firmware/foc_anpc_5kv_firmware.so
+            simulations/aerospace_5kv_anpc_flight.py
+            simulations/stress_tests_weibull_pulse.py
             simulations/poc_coreless_vs_iron.py
-            simulations/aerospace_1mw_flight.py
             simulations/regen_thermo_suite.py
             docs/*.pdf
-          body_path: RELEASE_NOTES_v1.0.0.md
+          body_path: RELEASE_NOTES_v2.0.0-HV.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -154,5 +154,3 @@ aero-kinetic-1mw-slotless-bldc/
 ## License
 
 Distributed under the MIT License. See `LICENSE` for details.
-
-```

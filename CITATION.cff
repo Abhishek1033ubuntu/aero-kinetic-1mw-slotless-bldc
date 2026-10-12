@@ -1,20 +1,22 @@
 cff-version: 1.2.0
-title: "AeroKinetic-1MW-Slotless-BLDC: 1.0 MW Inverted Slotless/Coreless BLDC Motor & Bidirectional Kinetic Regeneration Suite for Hybrid-Electric Aerospace Propulsion"
-message: "If you use this software, motor architecture, or firmware in your research, please cite it using the metadata below."
+title: "AeroKinetic-1MW-Slotless-BLDC: 1.0 MW Inverted Slotless/Coreless BLDC Engine & 5.0 kV 5-Level ANPC Kinetic Regeneration Suite for Hybrid-Electric Aerospace Propulsion"
+message: "If you use this motor architecture, 5.0 kV firmware, or high-voltage dielectric stress models in your research, please cite it using the metadata below."
 type: software
 authors:
   - family-names: "Singh"
     given-names: "Abhishek"
     orcid: "https://orcid.org/0009-0004-6913-096X"
-version: "1.0.0"
-date-released: "2026-10-11"
+version: "2.0.0-HV"
+date-released: "2026-10-12"
 license: "MIT"
 repository-code: "https://github.com/Abhishek1033ubuntu/aero-kinetic-1mw-slotless-bldc"
 keywords:
   - "electric propulsion"
   - "aerospace engineering"
   - "slotless bldc motor"
-  - "coreless motor"
+  - "high voltage propulsion"
+  - "5kV ANPC inverter"
+  - "partial discharge mitigation"
   - "kinetic regeneration"
   - "field oriented control"
   - "silicon carbide inverter"

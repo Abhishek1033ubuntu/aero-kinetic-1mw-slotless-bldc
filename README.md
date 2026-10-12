@@ -7,8 +7,8 @@
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0004--6913--096X-A6CE39)](https://orcid.org/0009-0004-6913-096X)
 [![Google Gemini](https://img.shields.io/badge/Powered_by-Google_Gemini-4285F4)](https://gemini.google.com)
 [![Google Colab](https://img.shields.io/badge/Open_in-Google_Colab-F9AB00)](https://colab.research.google.com)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23313865-blue?style=flat&logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.23313865)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23313865-blue?style=for-the-badge&logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.23313865) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
 
 <p align="left">
   <a href="https://github.com/Abhishek1033ubuntu/aero-kinetic-1mw-slotless-bldc">

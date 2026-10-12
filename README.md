@@ -1,10 +1,6 @@
-# AeroKinetic-1MW-Slotless-BLDC
+# AeroKinetic-1MW-Slotless-BLDC (v2.0.0-HV)
 
-> **1.0 MW Inverted Slotless/Coreless BLDC Motor & Bidirectional Kinetic Regeneration Suite for Hybrid-Electric Aerospace Propulsion**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
-[![Hardware: SiC AFE](https://img.shields.io/badge/Inverter-1200V%2F1000A%20SiC-green.svg)](#)
 [![HIL: C-Firmware Verified](https://img.shields.io/badge/HIL-C%2B%2B%20Firmware%20Verified-purple.svg)](#)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0004--6913--096X-A6CE39)](https://orcid.org/0009-0004-6913-096X)
 [![Google Gemini](https://img.shields.io/badge/Powered_by-Google_Gemini-4285F4)](https://gemini.google.com)
@@ -13,10 +9,35 @@
 [![PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg?logo=paypal)](https://www.paypal.me/Abhishek1033ubuntu)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23302888-blue?style=for-the-badge&logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.23302888)  
 
+<p align="left">
+ 
+  <a href="https://github.com/Abhishek1033ubuntu/aero-kinetic-1mw-slotless-bldc">
+    <img src="https://img.shields.io/badge/Bus_Voltage-5.0_kV_DC-0052CC" alt="5.0 kV DC">
+  </a>
+  <a href="https://github.com/Abhishek1033ubuntu/aero-kinetic-1mw-slotless-bldc">
+    <img src="https://img.shields.io/badge/Power_Density-18.52_kW%2Fkg-brightgreen" alt="Power Density">
+  </a>
+  <a href="https://github.com/Abhishek1033ubuntu/aero-kinetic-1mw-slotless-bldc">
+    <img src="https://img.shields.io/badge/Inverter-5--Level_ANPC_SiC-orange" alt="Inverter">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
+  </a>
+</p>
+
+## Executive Summary (v2.0.0-HV Upgrade)
+
+This repository contains the full electromechanical design, 5-Level ANPC C control firmware, high-voltage stress test models, and kinetic regeneration simulation scripts for the **1.0 MW Inverted Slotless BLDC Propulsion Engine**.
+
+Upgraded from $1.0\text{ kV} / 1,000\text{ A}$ (v1.0.0) to a **$5.0\text{ kV} / 200\text{ A}$ high-voltage architecture (v2.0.0-HV)**, the machine achieves an unprecedented **$18.52\text{ kW/kg}$ power density** ($54\text{ kg}$ total engine mass) while cutting $dV/dt$ voltage stress by $75\%$ and extending insulation lifespan to **$> 48,000\text{ hours}$**.
+
+# AeroKinetic-1MW-Slotless-BLDC
+
+> **1.0 MW Inverted Slotless/Coreless BLDC Motor & Bidirectional Kinetic Regeneration Suite for Hybrid-Electric Aerospace Propulsion**
 
 ---
 
-## Executive Summary
+## Executive Summary (v1.0.0)
 
 This repository contains the complete design, material specifications, mathematical reciprocity models, thermal-hydraulic calculations, and Hardware-in-the-Loop (HIL) C/C++ firmware for a **1.0 MW Inverted Slotless/Coreless Brushless DC (BLDC) Propulsion & Regeneration Motor**.
 
@@ -97,29 +118,30 @@ The 1.0 MW motor is driven by a 1200V / 1000A Silicon Carbide (SiC) Active Front
 
 
 ```
-
-.
+aero-kinetic-1mw-slotless-bldc/
 ├── .github/
 │   └── workflows/
-│       └── release.yml          # GitHub Actions workflow for automated releases
+│       └── release.yml                 # Automated build & release workflow for v2.0.0-HV
 ├── docs/
-│   ├── Final_Report.pdf         # Comprehensive engineering final report & IP records
-│   └── Motor_Design_Spec.pdf    # 1.0 MW mechanical CAD & winding specifications
+│   ├── Comprehensive_Final_Report_v2.pdf  # 5.0 kV High-Voltage upgraded engineering report
+│   └── Technical_Design_Spec_v2.pdf      # Updated CAD, dielectric & 5-Level ANPC specs
 ├── firmware/
-│   └── foc_firmware.c          # C99 aerospace-grade FOC & DPCC control ISR
+│   ├── foc_firmware.c                 # v1.0.0 2-Level FOC baseline driver
+│   └── foc_anpc_5kv_firmware.c        # v2.0.0 5-Level ANPC ISR & dynamic coil switching logic
 ├── simulations/
-│   ├── aerospace_1mw_flight.py # 1.0 MW flight profile & liquid cooling simulation
-│   ├── poc_coreless_vs_iron.py # Micro-scale baseline reciprocity verification
-│   └── regen_thermo_suite.py   # Kinetic & thermodynamic energy recovery suite
-├── .gitignore                   # Build artifact & environment ignore rules
-├── CHANGELOG.md                 # Semantic versioning release history
-├── CITATION.cff                 # Academic citation metadata (ORCID: 0009-0004-6913-096X)
-├── CONTRIBUTING.md              # Open-source contribution & code standards
-├── LICENSE                      # MIT Open-Source License
-├── README.md                    # Project documentation, benchmarks & Colab guide
-├── RELEASE_NOTES_v1.0.0.md      # Official v1.0.0 publication release notes
-├── requirements.txt             # Python simulation dependencies
-└── SECURITY.md                  # Vulnerability reporting policy
+│   ├── aerospace_5kv_anpc_flight.py   # 5.0 kV flight profile, liquid cooling & dV/dt transient model
+│   ├── poc_coreless_vs_iron.py        # Micro-scale baseline reciprocity model
+│   ├── stress_tests_weibull_pulse.py  # Stress Tests 1 & 3 (Weibull breakdown & pulse endurance)
+│   └── regen_thermo_suite.py          # Kinetic windmilling descent & coil-switching simulation
+├── .gitignore                          # Build artifact & binary ignore rules
+├── CHANGELOG.md                        # Version history (v1.0.0 -> v2.0.0-HV)
+├── CITATION.cff                        # Academic citation metadata (ORCID: 0009-0004-6913-096X)
+├── CONTRIBUTING.md                     # Open-source contribution & code standards
+├── LICENSE                             # MIT Open-Source License
+├── README.md                           # Main repo documentation, v2.0.0 benchmarks & badges
+├── RELEASE_NOTES_v2.0.0-HV.md          # Release release notes for 5.0 kV architecture
+├── requirements.txt                    # Python simulation dependencies
+└── SECURITY.md                         # Security and vulnerability disclosure policy
 
 ```
 

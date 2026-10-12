@@ -99,17 +99,27 @@ The 1.0 MW motor is driven by a 1200V / 1000A Silicon Carbide (SiC) Active Front
 ```
 
 .
-├── firmware/
-│   ├── foc_firmware.c          # Aerospace-grade C FOC & DPCC Control ISR
-│   └── foc_firmware.so         # Compiled shared library for Colab HIL testing
-├── simulations/
-│   ├── poc_coreless_vs_iron.py # Micro-scale baseline verification script
-│   ├── aerospace_1mw_flight.py # 1.0 MW flight profile & thermal liquid cooling
-│   └── regen_thermo_suite.py   # Flight profile kinetic & thermodynamic regen
+├── .github/
+│   └── workflows/
+│       └── release.yml          # GitHub Actions workflow for automated releases
 ├── docs/
-│   ├── Motor_Design_Spec.pdf   # 1.0 MW Mechanical CAD & Winding Specifications
-│   └── Final_Report.pdf        # Full Engineering Specification & Test Results
-└── README.md                   # Project documentation
+│   ├── Final_Report.pdf         # Comprehensive engineering final report & IP records
+│   └── Motor_Design_Spec.pdf    # 1.0 MW mechanical CAD & winding specifications
+├── firmware/
+│   └── foc_firmware.c          # C99 aerospace-grade FOC & DPCC control ISR
+├── simulations/
+│   ├── aerospace_1mw_flight.py # 1.0 MW flight profile & liquid cooling simulation
+│   ├── poc_coreless_vs_iron.py # Micro-scale baseline reciprocity verification
+│   └── regen_thermo_suite.py   # Kinetic & thermodynamic energy recovery suite
+├── .gitignore                   # Build artifact & environment ignore rules
+├── CHANGELOG.md                 # Semantic versioning release history
+├── CITATION.cff                 # Academic citation metadata (ORCID: 0009-0004-6913-096X)
+├── CONTRIBUTING.md              # Open-source contribution & code standards
+├── LICENSE                      # MIT Open-Source License
+├── README.md                    # Project documentation, benchmarks & Colab guide
+├── RELEASE_NOTES_v1.0.0.md      # Official v1.0.0 publication release notes
+├── requirements.txt             # Python simulation dependencies
+└── SECURITY.md                  # Vulnerability reporting policy
 
 ```
 

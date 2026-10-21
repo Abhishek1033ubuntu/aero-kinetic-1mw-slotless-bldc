@@ -4,12 +4,7 @@ on:
   push:
     tags:
       - 'v*.*.*'
-  workflow_dispatch:   # Allows manual trigger from Actions tabname: Build and Publish v2.0.0-HV Release
-
-on:
-  push:
-    tags:
-      - 'v*.*.*'
+  workflow_dispatch:
 
 jobs:
   build-and-release:
@@ -38,10 +33,10 @@ jobs:
       - name: Create GitHub Release
         id: create_release
         uses: softprops/action-gh-release@v2
-        with:      
+        with:
           fail_on_unmatched_files: false
-          tag_name: ${{ github.ref_name }}
-          name: Release ${{ github.ref_name }} — 5.0 kV High-Voltage ANPC Architecture
+          tag_name: ${{ github.ref_type == 'tag' && github.ref_name || 'v2.0.0-HV' }}
+          name: Release v2.0.0-HV — 5.0 kV High-Voltage ANPC Architecture
           draft: false
           prerelease: false
           files: |

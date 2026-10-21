@@ -6,10 +6,16 @@ on:
       - 'v*.*.*'
   workflow_dispatch:
 
+# Grant write permissions to create/update GitHub Releases
+permissions:
+  contents: write
+
 jobs:
   build-and-release:
     name: Build C Firmware & Publish Release Assets
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout Repository

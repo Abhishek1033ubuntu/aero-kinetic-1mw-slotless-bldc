@@ -4,6 +4,12 @@ on:
   push:
     tags:
       - 'v*.*.*'
+  workflow_dispatch:   # Allows manual trigger from Actions tabname: Build and Publish v2.0.0-HV Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build-and-release:

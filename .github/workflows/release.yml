@@ -32,9 +32,8 @@ jobs:
       - name: Create GitHub Release
         id: create_release
         uses: softprops/action-gh-release@v2
-        with:
-        fail_on_unmatched_files: false
         with:      
+          fail_on_unmatched_files: false
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }} — 5.0 kV High-Voltage ANPC Architecture
           draft: false
